@@ -9,8 +9,7 @@
         public int? MaxTokens { get; set; }
         public bool Stream { get; set; }
         public ChatSystemPrompt? SystemPrompt { get; set; }
-        public IDictionary<string, object> ProviderParameters { get; set; }
-            = new Dictionary<string, object>();
+        public IDictionary<string, object> ProviderParameters { get; set; } = new Dictionary<string, object>();
     }
 
     public class ChatMessage
