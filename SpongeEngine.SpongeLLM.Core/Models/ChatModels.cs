@@ -1,4 +1,4 @@
-﻿namespace SpongeEngine.LLMSharp.Core.Models
+﻿namespace SpongeEngine.SpongeLLM.Core.Models
 {
     public class ChatRequest
     {

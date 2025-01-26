@@ -1,7 +1,7 @@
-﻿using SpongeEngine.LLMSharp.Core.Exceptions;
-using SpongeEngine.LLMSharp.Core.Models;
+﻿using SpongeEngine.SpongeLLM.Core.Exceptions;
+using SpongeEngine.SpongeLLM.Core.Models;
 
-namespace SpongeEngine.LLMSharp.Core.Utils
+namespace SpongeEngine.SpongeLLM.Core.Utils
 {
     public static class ValidationHelper
     {
@@ -22,7 +22,9 @@ namespace SpongeEngine.LLMSharp.Core.Utils
                 errors.Add("TopP", "TopP must be between 0 and 1");
 
             if (errors.Any())
+            {
                 throw new ValidationException(errors, "Validation");
+            }
         }
 
         public static void ValidateChatRequest(ChatRequest request)
@@ -30,16 +32,24 @@ namespace SpongeEngine.LLMSharp.Core.Utils
             var errors = new Dictionary<string, string>();
 
             if (string.IsNullOrEmpty(request.ModelId))
+            {
                 errors.Add("ModelId", "Model ID must be specified");
+            }
 
             if (!request.Messages.Any())
+            {
                 errors.Add("Messages", "At least one message is required");
+            }
 
             if (request.Messages.Any(m => string.IsNullOrEmpty(m.Role)))
+            {
                 errors.Add("Message.Role", "Message role cannot be empty");
+            }
 
             if (errors.Any())
+            {
                 throw new ValidationException(errors, "Validation");
+            }
         }
     }
 }

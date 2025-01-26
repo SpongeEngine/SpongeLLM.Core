@@ -4,9 +4,9 @@ using Microsoft.Extensions.Logging;
 using Polly;
 using Polly.CircuitBreaker;
 using Polly.Retry;
-using SpongeEngine.LLMSharp.Core.Exceptions;
+using SpongeEngine.SpongeLLM.Core.Exceptions;
 
-namespace SpongeEngine.LLMSharp.Core
+namespace SpongeEngine.SpongeLLM.Core
 {
     public class LLMClientBaseOptions
     {

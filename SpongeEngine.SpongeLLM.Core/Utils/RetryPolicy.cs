@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
-using SpongeEngine.LLMSharp.Core.Exceptions;
+using SpongeEngine.SpongeLLM.Core.Exceptions;
 
-namespace SpongeEngine.LLMSharp.Core.Utils
+namespace SpongeEngine.SpongeLLM.Core.Utils
 {
     public class RetryPolicy
     {

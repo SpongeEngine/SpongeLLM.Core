@@ -1,4 +1,4 @@
-﻿namespace SpongeEngine.LLMSharp.Core.Exceptions
+﻿namespace SpongeEngine.SpongeLLM.Core.Exceptions
 {
     public class ModelNotFoundException : LlmSharpException
     {

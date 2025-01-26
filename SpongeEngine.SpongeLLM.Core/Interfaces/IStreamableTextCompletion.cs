@@ -1,6 +1,6 @@
-﻿using SpongeEngine.LLMSharp.Core.Models;
+﻿using SpongeEngine.SpongeLLM.Core.Models;
 
-namespace SpongeEngine.LLMSharp.Core.Interfaces
+namespace SpongeEngine.SpongeLLM.Core.Interfaces
 {
     public interface IStreamableTextCompletion {
         IAsyncEnumerable<TextCompletionToken> CompleteTextStreamAsync(TextCompletionRequest request, CancellationToken cancellationToken = default);

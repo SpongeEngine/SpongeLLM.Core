@@ -3,7 +3,7 @@ using Polly;
 using Polly.CircuitBreaker;
 using Polly.Retry;
 
-namespace SpongeEngine.LLMSharp.Core
+namespace SpongeEngine.SpongeLLM.Core
 {
     public abstract class LLMClientBase
     {
