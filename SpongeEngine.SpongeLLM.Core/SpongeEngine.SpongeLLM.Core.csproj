@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+        <LangVersion>10</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        
+        <!-- Package Info -->
+        <PackageId>SpongeEngine.SpongeLLM.Core</PackageId>
+        <Title>SpongeEngine.SpongeLLM.Core</Title>
+        <Version>0.0.1</Version>
+        <Authors>Dan Clipca</Authors>
+        <Company>Sponge Engine</Company>
+        <Description>Common logic for SpongeLLM, unified C# client for LLM providers.</Description>
+
+        <!-- Package Details -->
+        <PackageTags>llm, ai, openai, localai, koboldcpp, ollama, lm-studio, text-generation-webui, 
+        local-llm, offline-ai, self-hosted-ai, llama, gpt, neural-network, machine-learning, 
+        text-generation, completion, chat, dotnet, csharp, cross-platform</PackageTags>
+        <PackageProjectUrl>https://github.com/SpongeEngine/LLMSharp.Core</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/SpongeEngine/LLMSharp.Core</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+
+        <!-- Documentation -->
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>$(NoWarn);CS1591</NoWarn>
+
+        <!-- Symbol Package -->
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <RootNamespace>SpongeEngine.LLMSharp.Core</RootNamespace>
+    </PropertyGroup>
+
+    <!-- Package Dependencies -->
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="9.0.1" Condition="'$(TargetFramework)' == 'net6.0'" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="9.0.1" Condition="'$(TargetFramework)' == 'net7.0'" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="9.0.1" Condition="'$(TargetFramework)' == 'net8.0'" />
+        
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.1" Condition="'$(TargetFramework)' == 'net6.0'" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.1" Condition="'$(TargetFramework)' == 'net7.0'" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.1" Condition="'$(TargetFramework)' == 'net8.0'" />
+        <PackageReference Include="Polly" Version="8.5.1" />
+        <PackageReference Include="System.Linq.Async" Version="6.0.1" />
+    </ItemGroup>
+
+    <!-- Include README in the package -->
+    <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+</Project>
