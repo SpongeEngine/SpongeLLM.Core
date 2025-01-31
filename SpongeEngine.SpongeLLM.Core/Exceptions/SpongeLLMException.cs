@@ -1,11 +1,11 @@
-﻿namespace SpongeEngine.SpongeLLM.Core.Exceptions
+﻿namespace SpongeEngine.LLMSharp.Core.Exceptions
 {
-    public class LlmSharpException : Exception
+    public class SpongeLLMException : Exception
     {
         public int? StatusCode { get; }
         public string? ResponseContent { get; }
 
-        public LlmSharpException(
+        public SpongeLLMException(
             string message,
             int? statusCode = null,
             string? responseContent = null,

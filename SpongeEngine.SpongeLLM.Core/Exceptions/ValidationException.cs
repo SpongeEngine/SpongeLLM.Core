@@ -1,6 +1,6 @@
-﻿namespace SpongeEngine.SpongeLLM.Core.Exceptions
+﻿namespace SpongeEngine.LLMSharp.Core.Exceptions
 {
-    public class ValidationException : LlmSharpException
+    public class ValidationException : SpongeLLMException
     {
         public IDictionary<string, string> ValidationErrors { get; }
 

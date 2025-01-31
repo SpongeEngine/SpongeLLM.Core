@@ -8,7 +8,7 @@
         <!-- Package Info -->
         <PackageId>SpongeEngine.SpongeLLM.Core</PackageId>
         <Title>SpongeEngine.SpongeLLM.Core</Title>
-        <Version>0.0.3</Version>
+        <Version>0.1.0</Version>
         <Authors>Dan Clipca</Authors>
         <Company>Sponge Engine</Company>
         <Description>Common logic for SpongeLLM, unified C# client for LLM providers.</Description>

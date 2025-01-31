@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-using SpongeEngine.SpongeLLM.Core.Exceptions;
+using SpongeEngine.LLMSharp.Core.Exceptions;
 
 namespace SpongeEngine.SpongeLLM.Core.Utils
 {
@@ -40,12 +40,12 @@ namespace SpongeEngine.SpongeLLM.Core.Utils
                 }
             }
 
-            throw new LlmSharpException("Operation failed after retries", innerException: lastException);
+            throw new SpongeLLMException("Operation failed after retries", innerException: lastException);
         }
 
         private bool ShouldRetry(Exception ex)
         {
-            return ex is HttpRequestException || ex is TimeoutException || (ex is LlmSharpException llmEx && llmEx.StatusCode >= 500);
+            return ex is HttpRequestException || ex is TimeoutException || (ex is SpongeLLMException llmEx && llmEx.StatusCode >= 500);
         }
     }
 }

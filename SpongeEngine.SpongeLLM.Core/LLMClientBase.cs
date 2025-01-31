@@ -1,9 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using Polly;
-using Polly.CircuitBreaker;
-using Polly.Retry;
-
-namespace SpongeEngine.SpongeLLM.Core
+﻿namespace SpongeEngine.SpongeLLM.Core
 {
     public abstract class LLMClientBase
     {
