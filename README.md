@@ -1,1 +1,1 @@
-# LLMSharp.Core (In Progress)
+# LLMSharp.Core
