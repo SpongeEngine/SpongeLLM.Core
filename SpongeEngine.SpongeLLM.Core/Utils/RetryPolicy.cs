@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-using SpongeEngine.LLMSharp.Core.Exceptions;
+using SpongeEngine.SpongeLLM.Core.Exceptions;
 
 namespace SpongeEngine.SpongeLLM.Core.Utils
 {
